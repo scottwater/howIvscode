@@ -1,0 +1,70 @@
+{
+  "name": "howIvscode",
+  "displayName": "How I VSCode",
+  "description": "Share your the theme, font, and extensions you use with the community.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.setupHowIVSCode",
+        "title": "Setup HowIVSCode"
+      },
+      {
+        "command": "extension.syncDataToHowIVSCode",
+        "title": "Send My Info to HowIVSCode"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "How I VSCode Identification Key",
+        "properties": {
+          "howIVSCode.userIdentificationKey": {
+            "type": "string",
+            "default": null,
+            "description": "Your unique identification key",
+            "scope": "application"
+          }
+        }
+      },
+      {
+        "title": "How I VSCode API URL",
+        "properties": {
+          "howIVSCode.apiUrl": {
+            "type": "string",
+            "default": "endhn1xbnyfve.x.pipedream.net",
+            "description": "The API Url where we send data",
+            "scope": "application"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.37.0",
+    "glob": "^7.1.4",
+    "mocha": "^6.1.4",
+    "typescript": "^3.3.1",
+    "tslint": "^5.12.1",
+    "vscode-test": "^1.0.2"
+  },
+  "dependencies": {}
+}
