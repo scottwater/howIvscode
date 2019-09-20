@@ -1,3 +1,7 @@
+# Waring - NOT READY YET
+
+There is a bit of a chicken and egg here. I need to publish this package, but the site is not 100% ready. If you see this message, it is not ready to be used yet. Thanks!
+
 # How I VSCode README
 
 Easily share your current theme, font, and extensions with the community!
