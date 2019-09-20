@@ -14,7 +14,7 @@ const apiUrl = () => {
   const url: string | undefined = vscode.workspace
     .getConfiguration()
     .get("howIVSCode.apiUrl");
-  return url || "endhn1xbnyfve.x.pipedream.net";
+  return url || "howivscode.com";
 };
 
 const syncData = async (data: any) => {
