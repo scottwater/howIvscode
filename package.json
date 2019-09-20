@@ -1,8 +1,24 @@
 {
-  "name": "howIvscode",
+  "name": "howivscode",
   "displayName": "How I VSCode",
   "description": "Share your the theme, font, and extensions you use with the community.",
   "version": "0.0.1",
+  "author": {
+    "email": "howivscode@scottw.com",
+    "name": "Scott Watermasysk",
+    "url": "https://scottw.com"
+  },
+  "galleryBanner": {
+    "color": "#3B4252",
+    "theme": "light"
+  },
+  "icon": "images/logo.png",
+  "homepage": "https://howivscode.com",
+  "publisher": "How I VSCode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottwater/howivscode"
+  },
   "engines": {
     "vscode": "^1.36.0"
   },
@@ -41,7 +57,7 @@
         "properties": {
           "howIVSCode.apiUrl": {
             "type": "string",
-            "default": "endhn1xbnyfve.x.pipedream.net",
+            "default": "howivscode.com",
             "description": "The API Url where we send data",
             "scope": "application"
           }
