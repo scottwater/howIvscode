@@ -14,7 +14,7 @@
   },
   "icon": "images/logo.png",
   "homepage": "https://howivscode.com",
-  "publisher": "How I VSCode",
+  "publisher": "HowIVSCode",
   "repository": {
     "type": "git",
     "url": "https://github.com/scottwater/howivscode"
