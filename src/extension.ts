@@ -12,7 +12,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   const syncExtensions = vscode.commands.registerCommand(
     "extension.syncDataToHowIVSCode",
-    sendData
+    () => {
+      sendData();
+      vscode.window.showInformationMessage("Your data was send to HowIVSCode");
+    }
   );
 
   context.subscriptions.push(setupCommand);
