@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import {debounce} from "debounce";
 import syncData from "./syncService";
 import getExtensionData from "./extensionData";
 import themeData from "./themeData";
@@ -11,8 +12,9 @@ const sendData = async () => {
 };
 
 const captureChanges = () => {
-  vscode.extensions.onDidChange(sendData);
-  vscode.workspace.onDidChangeConfiguration(event => {
+  vscode.extensions.onDidChange(debounce(sendData, 500));
+
+  const configurationChanges = (event: any) => {
     if (
       event.affectsConfiguration("howIVSCode") ||
       event.affectsConfiguration("workbench.colorTheme") ||
@@ -21,7 +23,11 @@ const captureChanges = () => {
     ) {
       sendData();
     }
-  });
+  };
+
+  vscode.workspace.onDidChangeConfiguration(
+    debounce(configurationChanges, 500)
+  );
 };
 
 const getData = async () => {
