@@ -7,7 +7,7 @@ interface IThemeData {
 }
 
 const themeData = async (): Promise<IThemeData> => {
-  const config = await vscode.workspace.getConfiguration();
+  const config = vscode.workspace.getConfiguration();
   return {
     theme: config.get("workbench.colorTheme"),
     icon: config.get("workbench.iconTheme"),
