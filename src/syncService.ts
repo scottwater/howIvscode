@@ -42,21 +42,26 @@ const post = async (data: any, key: string, url: string) => {
   };
 
   const req = https.request(options, res => {
-    console.log(`statusCode: ${res.statusCode}`);
     let responseData = "";
 
     res.on("data", d => {
-      console.log("ON DATA");
       responseData += d;
     });
 
     res.on("end", () => {
-      console.log(JSON.parse(responseData));
+      const obj = JSON.parse(responseData);
+      if (!obj.success) {
+        vscode.window.showWarningMessage(
+          "HowIVSCode Sync Message had an unexpected result"
+        );
+      }
     });
   });
 
   req.on("error", error => {
-    console.error(error);
+    vscode.window.showErrorMessage(
+      `Failed to Sync with HowIVScode: ${error.message}`
+    );
   });
 
   req.write(jsonData);
