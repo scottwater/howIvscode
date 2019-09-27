@@ -4,8 +4,10 @@ import getExtensionData from "./extensionData";
 import themeData from "./themeData";
 
 const sendData = async () => {
-  const data = await getData();
-  syncData(data);
+  if (vscode.window.state.focused) {
+    const data = await getData();
+    syncData(data);
+  }
 };
 
 const captureChanges = () => {
