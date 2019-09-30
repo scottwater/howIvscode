@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import {debounce} from "debounce";
+import { debounce } from "./debounce";
 import syncData from "./syncService";
 import getExtensionData from "./extensionData";
 import themeData from "./themeData";
