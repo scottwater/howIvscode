@@ -1,7 +1,3 @@
-# Warning - NOT READY YET
-
-There is a bit of a chicken and egg here. I need to publish this package, but the site is not 100% ready. If you see this message, it is not ready to be used yet. Thanks!
-
 # How I VSCode README
 
 Easily share your current theme, font, and extensions with the community!
@@ -23,8 +19,10 @@ To use this extension, sign in with your GitHub account on https://howivscode.co
 
 You will need to enter this key into the configuration setting `howIVSCode.userIdentificationKey` or via the command: "Setup HowIVSCode"
 
+[Full setup instructions](https://howivscode.com/setup)
+
 ## Extension Settings
 
-There are currently no other settings. But I am open to suggestion on additional data you would like to see shared or possibly omitted.
+There are currently no other settings. But I am open to suggestions on additional data you would like to see shared or possibly omitted.
 
 **Enjoy!**
