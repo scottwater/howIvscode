@@ -3,6 +3,11 @@
 //  * @source https://github.com/chodorowicz/ts-debounce
 
 /**
+ * Inlined this module since it felt simpler than creating a dependency
+ * that would requiring using a package manager
+ * /
+
+/**
  * A function that emits a side effect and does not return anything.
  */
 export type Procedure = (...args: any[]) => void;
